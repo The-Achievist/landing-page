@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         {children} {process.env.NEXT_PUBLIC_ANALYTICS_DISABLED}
         {process.env.NEXT_PUBLIC_ANALYTICS_DISABLED == "false" && (
-          <span>"evvet"</span>
+          <span>evvet</span>
         )}
       </body>
       {process.env.NEXT_PUBLIC_ANALYTICS_DISABLED == "false" && (
