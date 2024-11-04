@@ -31,11 +31,9 @@ export default function RootLayout({
       >
         {children}
       </body>
-      {/* {!Boolean(process.env.NEXT_PUBLIC_ANALYTICS_DISABLED) && (
+      {process.env.NEXT_PUBLIC_ANALYTICS_DISABLED == "false" && (
         <GoogleAnalytics gaId="G-YYY6WR7LRJ" />
-      )} */}
-        <GoogleAnalytics gaId="G-YYY6WR7LRJ" />
-    
+      )}
     </html>
   );
 }
