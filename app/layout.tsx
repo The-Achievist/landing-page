@@ -29,9 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-        {" "}
-        {process.env.NEXT_PUBLIC_ANALYTICS_DISABLED}
+        {children} {process.env.NEXT_PUBLIC_ANALYTICS_DISABLED}
+        {process.env.NEXT_PUBLIC_ANALYTICS_DISABLED == "false" && (
+          <span>"evvet"</span>
+        )}
       </body>
       {process.env.NEXT_PUBLIC_ANALYTICS_DISABLED == "false" && (
         <GoogleAnalytics gaId="G-YYY6WR7LRJ" />
