@@ -1,22 +1,26 @@
-name: Deploy to Live Channel
+name: Deploy to Firebase
 
 on:
   push:
-    branches:
-      - main
-    # Optionally configure to run only for specific files. For example:
-    # paths:
-    # - "website/**"
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
-  deploy_live_website:
+  build:
+    name: Build and Deploy to Firebase
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      # Add any build steps here. For example:
-      # - run: npm ci && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm build
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
         with:
-          firebaseServiceAccount: "${{ secrets.FIREBASE_TOKEN }}"
-          projectId: achievist-app
-          channelId: live
+          args: deploy --only functions,hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
