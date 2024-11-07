@@ -5,11 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "firebase deploy --only functions,hosting",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@firebase/firestore": "^4.7.4",
     "@next/third-parties": "^15.0.1",
+    "firebase": "^11.0.1",
     "next": "14.2.15",
     "react": "^18",
     "react-dom": "^18"
