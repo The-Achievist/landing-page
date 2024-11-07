@@ -6,7 +6,7 @@ import { DM_Mono } from "next/font/google";
 import { useState } from "react";
 import { addToWaitingListAction } from "./actions/add-to-waiting-list";
 
-export const font_dm_mono = DM_Mono({
+const font_dm_mono = DM_Mono({
   subsets: ["latin"],
   weight: "400",
   display: "swap",
