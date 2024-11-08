@@ -13,32 +13,31 @@ env:
       - RUNTIME
 
   - variable: NEXT_FIREBASE_AUTH_DOMAIN
-  secret: achievist-firebase-auth-domain
-  availability:
-    - BUILD
-    - RUNTIME
+    secret: achievist-firebase-auth-domain
+    availability:
+      - BUILD
+      - RUNTIME
 
   - variable: NEXT_FIREBASE_PROJECT_ID
-  secret: achievist-firebase-project-id
-  availability:
-    - BUILD
-    - RUNTIME
+    secret: achievist-firebase-project-id
+    availability:
+      - BUILD
+      - RUNTIME
 
   - variable: NEXT_FIREBASE_STORAGE_BUCKET
-  secret: achievist-firebase-storage-bucket
-  availability:
-    - BUILD
-    - RUNTIME
+    secret: achievist-firebase-storage-bucket
+    availability:
+      - BUILD
+      - RUNTIME
 
   - variable: NEXT_FIREBASE_MESSAGING_SENDER_ID
-  secret: achievist-firebase-message-sender-id
-  availability:
-    - BUILD
-    - RUNTIME
-
+    secret: achievist-firebase-message-sender-id
+    availability:
+      - BUILD
+      - RUNTIME
 
   - variable: NEXT_FIREBASE_APP_ID
-  secret: achievist-firebase-app-id
-  availability:
-    - BUILD
-    - RUNTIME
+    secret: achievist-firebase-app-id
+    availability:
+      - BUILD
+      - RUNTIME
