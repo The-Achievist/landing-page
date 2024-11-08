@@ -27,7 +27,7 @@ export default function EmptyHome() {
       setError(
         "Thank you for joining the waiting list! We will let you know once we have launched the first version of the app."
       );
-    } catch (error) {
+    } catch {
       setError("An error occurred during fulfilling your request.");
     }
   };
